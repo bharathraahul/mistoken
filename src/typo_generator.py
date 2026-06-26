@@ -10,6 +10,14 @@ def delete(word,position):
     return word[:position]+word[position+1:]
 
 
+def insert(word,position,new_char):
+    assert 0 <= position <= len(word), "Position must be between 0 and the length of the word"
+    return word[:position]+new_char +word[position:]
+    
 
+def transpose(word,position):
+    assert 0 <= position < len(word)-1, "Position must be between 0 and the length of the word - 1"
+    return word[:position] + word[position+1] + word[position]+word[position+2:]
 
+    
 
